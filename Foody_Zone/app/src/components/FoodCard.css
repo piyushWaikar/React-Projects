@@ -1,0 +1,27 @@
+.food-card {
+  border-radius: 20rem;
+  /* This section defines the source for the border image */
+  border-image-source: radial-gradient(
+    80.69% 208.78% at 108.28% 112.58%, /* Gradient 1: Centered at 108.28% 112.58% with specific size */
+    #eabfff 0%,                        /* Gradient color starts with #eabfff */
+    rgba(135, 38, 183, 0) 100%         /* Ends with transparent color */
+  ),
+  radial-gradient(
+    80.38% 222.5% at -13.75% -12.36%,  /* Gradient 2: Centered at -13.75% -12.36% with specific size */
+    #98f9ff 0%,                        /* Gradient color starts with #98f9ff */
+    rgba(255, 255, 255, 0) 100%        /* Ends with transparent color */
+  );
+
+  /* This section defines the background of the element */
+  background: 
+    radial-gradient(
+      90.16% 143.01% at 15.32% 21.04%, /* Gradient: Centered at 15.32% 21.04% with specific size */
+      rgba(165, 239, 255, 0.2) 0%,     /* Gradient starts with rgba(165, 239, 255, 0.2) */
+      rgba(110, 191, 244, 0.0447917) 77.08%, /* Transitioning to rgba(110, 191, 244, 0.0447917) */
+      rgba(70, 144, 213, 0) 100%       /* Ends with transparent color */
+    );
+  background-blend-mode: overlay, normal; /* Combines the image and gradient with blend modes */
+
+  /* Applies a blur filter to the background */
+  backdrop-filter: blur(13.1842px);     /* Blurs the backdrop of the element with 13.1842px blur */
+}
