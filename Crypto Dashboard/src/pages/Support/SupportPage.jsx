@@ -8,7 +8,7 @@ import { Chatbox } from "../../components/LoanContactChatbox";
 const Support = () => {
   return (
     <DashboardLayout title={"Support"} >
-      <Stack spacing="5rem" pb='3rem'>
+      <Stack spacing="2rem" pb='3rem'>
         <SupportCard
           icon={IoMdMail}
           leftComponent={<ContactCard />}
