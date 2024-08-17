@@ -1,0 +1,88 @@
+@import '../../responsive.scss';
+.profilePage{
+    display: flex;
+    height: 100%;
+
+    @include md{
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .details{
+        flex: 3;
+        overflow-y: scroll;
+
+        @include md{
+            flex: none;
+            height: max-content;
+        }
+
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            width: 100%;
+            padding-right: 50px ;
+            padding-bottom: 50px;
+
+            @include md{
+                padding-right: 0;
+            }
+
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-top: 30px;
+                padding-bottom: 10px;
+                h1{
+                    font-weight: 400;
+                    font-size: 3rem;
+                }
+
+                button{
+                    padding: 12px 24px;
+                    background-color: #fece51;
+                    cursor: pointer;
+                    border: none;
+                }
+            }
+
+            .info{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                gap: 20px;
+
+                span{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    img{
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+    
+    .chatContainer{
+        height: 100%;
+        flex: 2;
+        background-color: #fcf5f3;
+
+        @include md{
+            flex: none;
+            height: max-content;
+        }
+
+        .wrapper{
+            padding: 0px 20px;
+            height: 100%;
+        }
+    }
+}

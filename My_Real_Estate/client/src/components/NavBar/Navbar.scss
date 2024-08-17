@@ -1,0 +1,154 @@
+@import '../../responsive.scss';
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+img{
+    width: 39px;
+}
+
+span {
+    @include md{
+        display: none;
+    }
+
+    @include sm{
+        display: initial;
+    }
+}
+
+.left {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    
+}
+a {
+    transition: all 0.4s ease ;
+
+    &:hover{
+        scale: 1.05;
+    }
+
+    @include sm {
+        display: none;
+    }
+}
+
+.right {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    flex: 2 ;
+    // background-color: #fcf5f3;
+    background-color: #fcf5f3;
+    height: 100%;
+    align-items: center;
+
+    .user{
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        @include md{
+            span{
+                display: none;
+            }
+        }
+
+        .profile{
+            padding: 12px 24px;
+            background-color: #fece51;
+            cursor: pointer;
+            border: none;
+            position: relative;
+
+            .notification{
+                position: absolute;
+                top: -8px;
+                right: -8px;
+                border-radius: 50%;
+                background-color: red;
+                height: 26px;
+                width: 26px;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    @include md {
+        background-color: transparent;
+    }
+
+
+    a {
+        padding: 12px 24px;
+        margin: 20px;
+    }
+
+    .register {
+        background-color: #fece51;
+    }
+
+    .menuIcon {
+        display: none;
+        z-index: 999;
+
+        @include sm {
+            display: initial;
+        }
+    }
+
+    .menu {
+        position: absolute;
+        background-color: black;
+        color: white;
+        height: 100vh;
+        width: 50%;
+        top: 0;
+        right: -50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: 550;
+
+        transition: all 1s ease;
+
+        @include sm {
+            a{
+                display: initial;
+            }
+        }
+
+        &.active{
+            right: 0;
+        }
+    }
+
+}
